@@ -6,13 +6,13 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:14 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/15 20:40:34 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/15 22:32:37 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact() : firstName(""), lastName(""), nickname(""), phoneNumber(""), darkestSecret("") {}
+Contact::Contact() {}
 
 void Contact::setContact(const std::string& fn, const std::string& ln, const std::string& nn,
 						 const std::string& pn, const std::string& ds) {
