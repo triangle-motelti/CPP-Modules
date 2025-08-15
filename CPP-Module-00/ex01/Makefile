@@ -6,20 +6,21 @@
 #    By: motelti <motelti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/15 13:43:37 by motelti           #+#    #+#              #
-#    Updated: 2025/08/15 13:43:56 by motelti          ###   ########.fr        #
+#    Updated: 2025/08/15 16:25:12 by motelti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 RM = rm -f
+INCLUDES = -I $(CURDIR)
 
-SRC = megaphone.cpp
+SRC = Contact.cpp PhoneBook.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-NAME = megaphone
+NAME = phonebook
 
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME): $(OBJ)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
