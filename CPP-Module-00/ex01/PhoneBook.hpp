@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:02 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/15 16:25:37 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/15 20:38:28 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class PhoneBook {
 	public:
 	PhoneBook();
 	void addContact(const Contact& c);
-	void listContacts() const;
-	bool validIndex(int idx) const;
-	void showContact(int idx) const;
-	int getContactCount() const;
+	void listContacts();
+	bool validIndex(int idx);
+	void showContact(int idx);
+	int getContactCount();
 };
 
 #endif

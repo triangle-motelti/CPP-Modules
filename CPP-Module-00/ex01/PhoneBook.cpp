@@ -6,10 +6,52 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:10 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/15 16:30:17 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/15 20:42:57 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook() : contactCount(0), oldestIndex(0) {}
 
+void PhoneBook::addContact(const Contact& c) {
+	if (contactCount < 8) {
+		contacts[contactCount++] = c;
+	}
+	else {
+		contacts[oldestIndex] = c;
+		oldestIndex = (oldestIndex + 1) % 8;
+	}
+}
+
+void PhoneBook::listContacts() {
+	std::cout << std::setw(10) << "Index" << "|"
+			  << std::setw(10) << "First Name" << "|"
+			  << std::setw(10) << "Last Name" << "|"
+			  << std::setw(10) << "Nickname" << std::endl;
+	for (int i = 0; i < contactCount; ++i) {
+		std::cout << std::setw(10) << i << "|";
+		for (int j = 0; j < 3; ++j) {
+			std::string field = contacts[i].getField(j);
+			if (field.length() > 10)
+				field = field.substr(0, 9) + ".";
+			std::cout << std::setw(10) << field << "|";
+		}
+		std::cout << std::endl;
+	}
+}
+
+bool PhoneBook::validIndex(int idx) {
+	return idx >= 0 && idx < contactCount;
+}
+
+void PhoneBook::showContact(int idx) {
+	if (validIndex(idx))
+		contacts[idx].printContact();
+	else
+		std::cout << "Invalid index." << std::endl;
+}
+
+int PhoneBook::getContactCount() {
+	return contactCount;
+}
