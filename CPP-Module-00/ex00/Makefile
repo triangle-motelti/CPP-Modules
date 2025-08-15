@@ -6,12 +6,12 @@
 #    By: motelti <motelti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/14 22:54:58 by motelti           #+#    #+#              #
-#    Updated: 2025/08/14 22:55:51 by motelti          ###   ########.fr        #
+#    Updated: 2025/08/15 11:07:24 by motelti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-CC = g++
+CC = c++
 RM = rm -f
 
 SRC = megaphone.cpp
