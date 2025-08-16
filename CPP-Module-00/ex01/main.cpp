@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:17 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 14:43:59 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 17:28:13 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,17 @@ bool onlyLetters(const std::string& s) {
 	return true;
 }
 
+void errorChecks(std::string fields[5], int index) {
+	if (index == 3 && containsAlpha(fields[index])) {
+		std::cout<<"Error: Phone number cannot contain letters!"<< std::endl;
+		fields[index] = "";
+	}
+	if ((index == 0 || index == 1) && !onlyLetters(fields[index])) {
+		std::cout<<"Error: First name and Last name must only contain letters and one string!"<< std::endl;
+		fields[index] = "";
+	}
+}
+
 void handleAdd(PhoneBook &pb) {
 	std::string fields[5];
 	const char* prompts[5] = {
@@ -59,14 +70,7 @@ void handleAdd(PhoneBook &pb) {
 			|| (i == 3 && containsAlpha(fields[i]))
 			|| ((i == 0 || i == 1) && !onlyLetters(fields[i]))) {
 			fields[i] = getInput(prompts[i]);
-			if (i == 3 && containsAlpha(fields[i])) {
-				std::cout<<"Error: Phone number cannot contain letters!"<< std::endl;
-				fields[i] = "";
-			}
-			if ((i == 0 || i == 1) && !onlyLetters(fields[i])) {
-				std::cout<<"Error: First name and Last name must only contain letters!"<< std::endl;
-				fields[i] = "";
-			}
+			errorChecks(fields, i);
 		}
 	}
 
