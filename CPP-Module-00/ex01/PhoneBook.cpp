@@ -6,16 +6,11 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:10 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 10:51:02 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 17:04:19 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-
-PhoneBook::PhoneBook() {
-    contactCount = 0;
-    oldestIndex = 0;
-}
 
 void PhoneBook::addContact(const Contact& c) {
 	if (contactCount < 8) {

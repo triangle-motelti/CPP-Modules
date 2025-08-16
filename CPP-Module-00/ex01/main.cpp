@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:17 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 10:33:48 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 14:43:59 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int main() {
 	while (true) {
 		std::cout<<"Enter command (ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
-	
+
 		if (std::cin.eof())
 			break;
 		if (command == "ADD") {
