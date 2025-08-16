@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:14 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:04:25 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 17:58:13 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ void Contact::printContact() {
 
 bool Contact::isEmpty() {
 	return firstName.empty() || lastName.empty() || nickname.empty() ||
-		   phoneNumber.empty() || darkestSecret.empty();
+		phoneNumber.empty() || darkestSecret.empty();
 }

@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:10 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:04:19 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 18:01:27 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@ void PhoneBook::addContact(const Contact& c) {
 }
 
 void PhoneBook::listContacts() {
-	std::cout << std::setw(10) << "Index" << "|"
-			  << std::setw(10) << "First Name" << "|"
-			  << std::setw(10) << "Last Name" << "|"
-			  << std::setw(10) << "Nickname" << std::endl;
+	std::cout << std::setw(14) << "Index" << "|"
+			  << std::setw(14) << "First Name" << "|"
+			  << std::setw(14) << "Last Name" << "|"
+			  << std::setw(14) << "Nickname" << std::endl;
 	for (int i = 0; i < contactCount; ++i) {
-		std::cout << std::setw(10) << i << "|";
+		std::cout << std::setw(14) << i + 1 << "|";
 		for (int j = 0; j < 3; ++j) {
 			std::string field = contacts[i].getField(j);
 			if (field.length() > 10)
 				field = field.substr(0, 9) + ".";
-			std::cout << std::setw(10) << field << "|";
+			std::cout << std::setw(14) << field << "|";
 		}
 		std::cout << std::endl;
 	}

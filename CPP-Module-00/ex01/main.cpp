@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:17 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:28:13 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 18:03:30 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void errorChecks(std::string fields[5], int index) {
 
 void handleAdd(PhoneBook &pb) {
 	std::string fields[5];
+	Contact c;
+	
 	const char* prompts[5] = {
 		"First name: ",
 		"Last name: ",
@@ -74,7 +76,6 @@ void handleAdd(PhoneBook &pb) {
 		}
 	}
 
-	Contact c;
 	c.setContact(fields[0], fields[1], fields[2], fields[3], fields[4]);
 	pb.addContact(c);
 	std::cout<<"Contact added!"<<std::endl;
@@ -85,15 +86,14 @@ void handleSearch(PhoneBook &pb) {
 		std::cout<<"No contacts to display."<<std::endl;
 		return ;
 	}
-
 	pb.listContacts();
 	std::cout<<"Enter index to display: ";
 	std::string idxStr;
 	std::getline(std::cin, idxStr);
 
 	int i = -1;
-	if (idxStr.length() == 1 && idxStr[0] >= '0' && idxStr[0] <= '7')
-		i = idxStr[0] - '0';
+	if (idxStr.length() == 1 && idxStr[0] >= '1' && idxStr[0] <= '8')
+		i = idxStr[0] - '1';
 
 	pb.showContact(i);
 }
