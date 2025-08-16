@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:10 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/15 22:53:01 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 10:51:02 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void PhoneBook::showContact(int idx) {
 	if (validIndex(idx))
 		contacts[idx].printContact();
 	else
-		std::cout << "Invalid index." << std::endl;
+		std::cout <<"Invalid index."<<std::endl;
 }
 
 int PhoneBook::getContactCount() {

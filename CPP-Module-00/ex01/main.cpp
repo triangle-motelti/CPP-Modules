@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:17 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 10:19:10 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/16 10:33:48 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,24 @@ bool isEmptyOrWhitespace(const std::string& s) {
 	return true;
 }
 
+bool containsAlpha(const std::string& s) {
+	for (size_t i = 0; i < s.length(); ++i) {
+		if (std::isalpha(s[i]))
+			return true;
+	}
+	return false;
+}
+
+bool onlyLetters(const std::string& s) {
+	if (s.empty())
+		return false;
+	for (size_t i = 0; i < s.length(); ++i) {
+		if (!std::isalpha(s[i]))
+			return false;
+	}
+	return true;
+}
+
 void handleAdd(PhoneBook &pb) {
 	std::string fields[5];
 	const char* prompts[5] = {
@@ -37,8 +55,18 @@ void handleAdd(PhoneBook &pb) {
 	};
 	for (int i = 0; i < 5; ++i) {
 		fields[i] = "";
-		while (fields[i].empty() || isEmptyOrWhitespace(fields[i])) {
+		while (fields[i].empty() || isEmptyOrWhitespace(fields[i])
+			|| (i == 3 && containsAlpha(fields[i]))
+			|| ((i == 0 || i == 1) && !onlyLetters(fields[i]))) {
 			fields[i] = getInput(prompts[i]);
+			if (i == 3 && containsAlpha(fields[i])) {
+				std::cout<<"Error: Phone number cannot contain letters!"<< std::endl;
+				fields[i] = "";
+			}
+			if ((i == 0 || i == 1) && !onlyLetters(fields[i])) {
+				std::cout<<"Error: First name and Last name must only contain letters!"<< std::endl;
+				fields[i] = "";
+			}
 		}
 	}
 
@@ -73,6 +101,7 @@ int main() {
 	while (true) {
 		std::cout<<"Enter command (ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
+	
 		if (std::cin.eof())
 			break;
 		if (command == "ADD") {
@@ -83,6 +112,9 @@ int main() {
 		}
 		else if (command == "EXIT") {
 			break;
+		}
+		else {
+			std::cout<<"usage: this is the only acceptable input => ADD or SEARCH or EXIT !!!!!!!!"<<"\n";
 		}
 	}
 	std::cout<<"Goodbye! Your contacts are lost forever!"<<std::endl;
