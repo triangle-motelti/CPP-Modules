@@ -6,14 +6,14 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:14 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:58:13 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/19 15:58:03 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void Contact::setContact(const std::string& fn, const std::string& ln, const std::string& nn,
-						 const std::string& pn, const std::string& ds) {
+void Contact::setContact(std::string& fn, std::string& ln, std::string& nn,
+						 std::string& pn, std::string& ds) {
 	firstName = fn;
 	lastName = ln;
 	nickname = nn;
