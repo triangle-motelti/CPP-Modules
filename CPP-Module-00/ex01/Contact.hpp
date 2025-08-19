@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:44:58 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:03:04 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/19 15:55:52 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ class Contact {
 	
 	public:
 	Contact() {}
-	void setContact(const std::string& fn, const std::string& ln, const std::string& nn,
-					const std::string& pn, const std::string& ds);
+	void setContact(std::string& fn, std::string& ln, std::string& nn, std::string& pn, std::string& ds);
 	std::string getField(int idx);
 	void printContact();
 	bool isEmpty();
