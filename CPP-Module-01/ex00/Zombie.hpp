@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 14:23:59 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/21 11:41:08 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/21 11:44:53 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Zombie {
 	private :
-	std::string Name;
+	std::string name;
 	
 	public :
 	void announce(void);
