@@ -6,7 +6,13 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 14:23:24 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/20 14:23:25 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/21 11:53:54 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie* newZombie(std::string name)
+{
+	return new Zombie(name);
+}
