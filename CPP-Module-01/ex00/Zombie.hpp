@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 14:23:59 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/21 11:44:53 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/21 12:00:21 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+
 
 class Zombie {
 	private :
@@ -24,3 +25,6 @@ class Zombie {
 	Zombie(std::string name);
 	~Zombie();
 }
+
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
