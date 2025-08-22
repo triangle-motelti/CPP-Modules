@@ -6,7 +6,7 @@
 #    By: motelti <motelti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/21 17:58:09 by motelti           #+#    #+#              #
-#    Updated: 2025/08/21 17:59:46 by motelti          ###   ########.fr        #
+#    Updated: 2025/08/22 10:19:49 by motelti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 RM = rm -f
 
-SRC = main.cpp Zombie.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 
 NAME = zombie
