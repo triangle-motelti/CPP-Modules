@@ -6,7 +6,7 @@
 #    By: motelti <motelti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/22 13:20:16 by motelti           #+#    #+#              #
-#    Updated: 2025/08/22 13:41:24 by motelti          ###   ########.fr        #
+#    Updated: 2025/08/22 13:51:06 by motelti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ RM = rm -f
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-NAME = zombie
+NAME = brain
 
 all: $(NAME)
 
