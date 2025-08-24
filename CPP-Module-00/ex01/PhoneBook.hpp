@@ -6,12 +6,11 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:45:02 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/16 17:03:56 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/24 11:53:16 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#pragma once
 
 #include "Contact.hpp"
 
@@ -33,5 +32,3 @@ class PhoneBook {
 	void showContact(int idx);
 	int getContactCount();
 };
-
-#endif

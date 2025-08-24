@@ -6,14 +6,12 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 13:44:58 by motelti           #+#    #+#             */
-/*   Updated: 2025/08/19 15:55:52 by motelti          ###   ########.fr       */
+/*   Updated: 2025/08/24 11:52:49 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#pragma once
 
-// #include <string>
 #include <iomanip>
 #include <iostream>
 
@@ -33,5 +31,3 @@ class Contact {
 	void printContact();
 	bool isEmpty();
 };
-
-#endif
