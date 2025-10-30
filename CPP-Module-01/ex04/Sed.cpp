@@ -6,7 +6,7 @@
 /*   By: motelti <motelti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:40:43 by motelti           #+#    #+#             */
-/*   Updated: 2025/10/17 16:40:46 by motelti          ###   ########.fr       */
+/*   Updated: 2025/10/30 15:20:13 by motelti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ bool Sed::process() {
 	}
 
 	std::string line;
-	while (std::getline(infile, line)) {
+	while (std::getline(infile, line)) 
+	{
 		size_t pos = 0;
-		while (_s1.length() > 0 && (pos = line.find(_s1, pos)) != std::string::npos) {
+		while (_s1.length() > 0 && (pos = line.find(_s1, pos)) != std::string::npos) 
+		{
 			line = line.substr(0, pos) + _s2 + line.substr(pos + _s1.length());
 			pos += _s2.length();
 		}
